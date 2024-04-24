@@ -132,3 +132,142 @@ body, html {
 ::-webkit-scrollbar {
   display: none;
 }
+
+/* Styles for the section that directly contains the contact-container */
+section {
+  height: 100vh; /* Full height of the viewport */
+  display: flex;
+  align-items: center; /* Centers content vertically in the container */
+  justify-content: center; /* Centers content horizontally in the container */
+  flex-direction: column;
+}
+
+/* Keyframes for the fade-in and slide-up effect */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Starts 20 pixels down */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Styles for the contact-container with animation */
+.contact-container {
+  width: 600px; /* Set a fixed width for better control */
+  padding: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Adds shadow for styling */
+  background: #dadada; /* Sets background color */
+  border-radius: 8px; /* Rounded corners for aesthetics */
+  animation: fadeInUp 0.8s ease-out forwards; /* Applies the animation */
+  position: relative;
+  margin-top: -300px;
+  
+}
+
+/* Styles for the form and elements inside it remain the same */
+.form-control {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #073f1a;
+  border-radius: 5px;
+  background-color: #ececec;
+}
+
+.btn {
+  padding: 10px;
+  background-color: #27940f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 15px;
+  font-family: 'Outfit', sans-serif; 
+}
+
+.btn:hover {
+  background-color: #21ce49;
+}
+
+.message-box{
+  height: 35vh;
+}
+
+.contact-section {
+  background: linear-gradient(-45deg, #2ccc49, #0a7d40, #154108, #3f9b4a);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  height: 100vh;
+  text-align: center;
+  padding: 20px; /* Add padding for spacing */
+}
+
+@keyframes gradient {
+  0% {
+      background-position: 0% 50%;
+  }
+
+  50% {
+      background-position: 100% 50%;
+  }
+
+  100% {
+      background-position: 0% 50%;
+  }
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  outline: none; /* Disables default browser outline */
+  border: 2px solid #25d262; /* New border color when element is focused */
+  box-shadow: 0 0 3px #074312; /* Optional: Adds a glow effect */
+  
+}
+
+@keyframes slideFadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px); /* Starts 50 pixels left of the initial position */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Assuming you apply this to a main content container on your homepage */
+.home-container {
+  animation: slideFadeInLeft 0.8s ease-out forwards; /* Applies the animation */
+  /* Additional styles for your main content container */
+  padding: 20px;
+  width: 90%; /* Adjust based on your layout */
+  max-width: 1200px; /* Prevents the content from becoming too wide on large screens */
+  margin: auto; /* Centers the content horizontally if under max-width */
+}
+
+
+.notification {
+  color: white;
+  background-color: #1ced54; /* Green for success messages */
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 15px;
+  
+}
+
+.notification.error {
+  background-color: #ff6b6b; /* Red for error messages */
+}

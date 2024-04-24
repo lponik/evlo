@@ -9,7 +9,7 @@ const Home = () => {
 
   return (
     <div>
-        <div>
+        <div className = "home-container">
             
               <div className="stripes-container">
                 <img className="stripesimg" src="/src/assets/stripes.jpeg" alt="Stripes" />
@@ -24,7 +24,9 @@ const Home = () => {
                     Premier Service, Premier Quality.
                   </div>
 
-                  <button className="overlay-button" onClick={navigateToContact}>Book a Free Estimate Today!</button>
+                  <button className="overlay-button" onClick={navigateToContact}>
+                    Book a Free Estimate Today!
+                  </button>
                   
                 </div>
               </div>
