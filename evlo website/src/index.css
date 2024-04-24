@@ -205,7 +205,7 @@ textarea {
 }
 
 .contact-section {
-  background: linear-gradient(-45deg, #2ccc49, #0a7d40, #154108, #3f9b4a);
+  background: linear-gradient(-45deg, #1c9231, #02150b, #154108, #021805);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
   height: 100vh;
